@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+}
+
+button {
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+button {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+td,
+th {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

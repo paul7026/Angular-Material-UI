@@ -1,0 +1,65 @@
+<h1 mat-dialog-title>Add product Form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Product Name</mat-label>
+      <input formControlName="productName" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="fruits">Fruits</mat-option>
+        <mat-option value="vegetables">Vegetables</mat-option>
+        <mat-option value="electronics">Electronics</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <label>Product Freshness</label>
+    <mat-radio-group class="radio-group" formControlName="freshness">
+      <mat-radio-button
+        class="radio-button"
+        *ngFor="let fresh of freshnessList"
+        [value]="fresh"
+        >{{ fresh }}</mat-radio-button
+      >
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="price"
+        placeholder="USD"
+        min="0.00"
+        max="10000.00"
+        step="0.01"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Comment</mat-label>
+      <textarea matInput formControlName="comment"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addProduct()"
+    [disabled]="productForm.invalid"
+  >
+    {{ actionBtn }}
+  </button>
+</div>

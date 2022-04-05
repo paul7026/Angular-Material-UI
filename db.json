@@ -1,0 +1,31 @@
+{
+  "productList": [
+    {
+      "productName": "apple",
+      "category": "Fruits",
+      "date": "2022-04-13T17:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 1,
+      "comment": "some comment",
+      "id": 1
+    },
+    {
+      "productName": "potatoes",
+      "category": "vegetables",
+      "date": "2022-04-20T17:00:00.000Z",
+      "freshness": "Brand New",
+      "price": 1.5,
+      "comment": "some comment",
+      "id": 2
+    },
+    {
+      "productName": "phone",
+      "category": "electronics",
+      "date": "2022-04-02T17:00:00.000Z",
+      "freshness": "Second Hand",
+      "price": 500,
+      "comment": "some comment",
+      "id": 3
+    }
+  ]
+}
